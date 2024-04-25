@@ -15,7 +15,7 @@ const Layout = ({children}) => {
             Startup
   
         </div> 
-        <div className='w-screen  lg:hidden flex text-md h-12 bg-white fixed z-40 rounded-r-lg top-16 left-0 pt-3 pl-2'>
+        <div className='w-screen  lg:hidden flex text-md h-14 bg-white fixed z-40 rounded-r-lg top-14 left-0 pt-3 pl-2'>
           <h2 className=' font-bold text-gray-700'>Nyabugogo - Kimironko</h2>
           <p className='text-sm text-gray-600 font-medium'>Next stop: <span>Kacyiru park</span></p>
           <p className='text-sm text-gray-600 font-medium'>Distance:<span> 23km </span>&nbsp;&nbsp;&nbsp; Time:<span> 23 Minutes</span></p>
@@ -30,7 +30,7 @@ const Layout = ({children}) => {
    <div className=' h-[calc(100vh-112px)] '>
         {children}
    </div>
-   <div className='bg-green-400 fixed bottom-0 z-20 font-bold text-xl bg-gradient-to-r from-emerald-200 to-green-600 px-4 gap-x-16 text-gray-700 flex items-center justify-center pt-3  h-14 w-full'>
+   <div className='bg-green-400 fixed bottom-0 z-20 font-bold text-xl bg-gradient-to-r from-emerald-200 to-green-600 px-4 gap-x-16 text-gray-700 flex items-center justify-center pt-2  h-14 w-full'>
    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />

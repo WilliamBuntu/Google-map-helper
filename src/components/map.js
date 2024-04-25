@@ -1,18 +1,40 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState,  } from 'react';
 // import './App.css';
 
-import { Map, GoogleApiWrapper, Marker, Polyline, useMap,  useMapLibrary, DirectionsService } from 'google-maps-react';
-// import { DirectionsService } from 'google-maps-react';
+import { Map, APIProvider, Marker, Polyline, useMap, useMapLibrary, } from '@vis.gl/react-google-maps';
+
+
+
+export default function Intro(){
+
+    return (
+       
+        <div>
+            <APIProvider  apiKey = {process.env.REACT_APP_GOOGLE_MAPS_API_KEY} >
+           
+           <Map
+            style={{ width: '100%', height: '100%', position: 'relative' }}
+            initialCenter={{ lat: -1.939826787816454, lng: 30.0445426438232 }}
+            zoom={12}
+            fullscreenControl={false}
+           >
+           {/* <Directions /> */}
+           </Map>
+
+            </APIProvider>
+        </div>
+    );
+}
 
 
 
 
-const MapContainer = (props) => {
-  
-  
 
-  function Directions(){
-    
+
+
+
+
+function Directions(){
     const map = useMap();
     const routeslibrary = useMapLibrary("routes");
      const [DirectService, setDirectService] = useState();
@@ -53,50 +75,3 @@ const MapContainer = (props) => {
     <h1> {selected.summary} </h1>
    </div>
    }
-
-
-  return (
-    <div className='h-full'> 
-      <Map
-        google={props.google}
-        style={{ width: '100%', height: '100%', position: 'relative' }}
-        initialCenter={{ lat: -1.939826787816454, lng: 30.0445426438232 }}
-        zoom={12}
-        fullscreenControl={false}
-        // onClick={handleMapClick} // Add onClick event handler
-      >
-        
-        {/* <Directions/> */}
-        
-        
-       
-      </Map>
-         
-         {/* <Directions/> */}
-
-      {/* {eta && (
-        <p className="text-center bg-red-700">
-          ETA to next stop: {eta}<br />
-          Distance to next stop: {distanceToNextStop}
-        </p>
-      )} */}
-
-
-    </div>
-  );
-
-
-};
-
-export default GoogleApiWrapper({
-  apiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
-})(MapContainer);
-
-
-
-
-
-
-
-
-
